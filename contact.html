@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Future | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="EV.jpg" alt="EV Future Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ev-phev.html">EV & PHEV</a></li>
+                <li><a href="join.html">Join Revolution</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button class="login-btn" onclick="redirectToLogin()">Login</button></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out with any questions or inquiries.</p>
+        </div>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Address:</strong> University Way, London E16 2RD</p>
+            <p><strong>Phone:</strong> 07732504855</p>
+            <p><strong>Email:</strong> support@evfuture.com</p>
+            <img src="images/location.jpg" alt="Company Location" class="contact-image">
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        
+        <p>&copy; 2025 EV Future | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

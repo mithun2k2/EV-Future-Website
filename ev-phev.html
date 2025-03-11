@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Future | EV & PHEV</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="EV.jpg" alt="EV Future Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ev-phev.html" class="active">EV & PHEV</a></li>
+                <li><a href="join.html">Join Revolution</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="login-btn" onclick="redirectToLogin()">Login</button></li>
+
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <section class="ev-hero">
+        <div class="ev-hero-content">
+            <h1>Electric & Plug-in Hybrid Vehicles</h1>
+            <p>Explore the future of transportation with clean energy solutions.</p>
+        </div>
+    </section>
+
+    <section class="ev-content">
+        <div class="container">
+            <h2>What are Electric Vehicles (EVs)?</h2>
+            <img src="images/electric-v.jpg" alt="Electric Vehicle" class="ev-image">
+            <p>Electric Vehicles (EVs) are powered entirely by electricity and have zero emissions. They store energy in high-capacity batteries and are recharged through electric grids.</p>
+
+            <h2>What are Plug-in Hybrid Electric Vehicles (PHEVs)?</h2>
+            <img src="images/phev.jpg" alt="Plug-in Hybrid Vehicle" class="ev-image">
+            <p>PHEVs combine an electric battery with a traditional fuel engine. They can run on electric power for short distances and switch to gasoline when needed.</p>
+
+
+            <h2>EV vs. PHEV vs. Fuel-based Vehicles</h2>
+            <table class="ev-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>EV</th>
+                    <th>PHEV</th>
+                    <th>Fuel-Based</th>
+                </tr>
+                <tr>
+                    <td>Emissions</td>
+                    <td>Zero</td>
+                    <td>Low</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Fuel Cost</td>
+                    <td>Low</td>
+                    <td>Moderate</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Maintenance</td>
+                    <td>Minimal</td>
+                    <td>Moderate</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td>250-400 miles</td>
+                    <td>500+ miles</td>
+                    <td>400+ miles</td>
+                </tr>
+            </table>
+
+            <h2>Explore Different EV Models</h2>
+            <div class="ev-slider">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <img src="images/model-3.jpg" alt="EV Model 3" class="slide">
+                <img src="images/model-x.jpg" alt="EV Model x" class="slide">
+                <img src="images/model-y.jpg" alt="EV Model y" class="slide">
+                <img src="images/model-s.jpg" alt="EV Model s" class="slide">
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EV Future | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
