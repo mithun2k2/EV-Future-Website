@@ -143,3 +143,79 @@ function redirectToLogin() {
     window.location.href = "login.html"; // Redirect to the Login Page
 }
 
+// Open the Forgot Password Modal
+function openForgotPasswordModal() {
+    document.getElementById('forgotPasswordModal').style.display = 'flex';
+}
+
+// Close the Forgot Password Modal
+function closeForgotPasswordModal() {
+    document.getElementById('forgotPasswordModal').style.display = 'none';
+}
+
+// Handle Forgot Password Form Submission
+document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('forgot-email').value.trim();
+
+    if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    alert(`A password reset link has been sent to ${email}`);
+    closeForgotPasswordModal();
+});
+// Modal functionality
+function openModal() {
+    document.getElementById('forgotPasswordModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('forgotPasswordModal').style.display = 'none';
+}
+
+document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('forgot-email').value;
+    alert(`Password reset link sent to ${email}`);
+    closeModal();
+});
+
+// Open the Create Account Modal
+function openCreateAccountModal() {
+    document.getElementById('createAccountModal').style.display = 'flex';
+}
+
+// Close the Create Account Modal
+function closeCreateAccountModal() {
+    document.getElementById('createAccountModal').style.display = 'none';
+}
+
+// Handle Create Account Form Submission
+document.getElementById('createAccountForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('create-name').value.trim();
+    const email = document.getElementById('create-email').value.trim();
+    const password = document.getElementById('create-password').value.trim();
+
+    if (!name || !email || !password) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    alert(`Account created successfully for ${name}!`);
+    closeCreateAccountModal();
+});
+
+// Email Validation Function
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}

@@ -39,12 +39,47 @@
                 <button type="submit">Login</button>
 
                 <div class="login-links">
-                    <a href="#">Forgot Password?</a>
-                    <a href="#">Create an Account</a>
+                    <a href="javascript:void(0);" onclick="openForgotPasswordModal()">Forgot Password?</a>
+                    <a href="javascript:void(0);" onclick="openCreateAccountModal()">Create an Account</a>
                 </div>
             </form>
         </div>
     </section>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeForgotPasswordModal()">&times;</span>
+            <h2>Forgot Password</h2>
+            <p>Enter your email address to reset your password:</p>
+            <form id="forgotPasswordForm">
+                <label for="forgot-email">Email:</label>
+                <input type="email" id="forgot-email" name="forgot-email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Account Modal -->
+<div id="createAccountModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeCreateAccountModal()">&times;</span>
+        <h2>Create an Account</h2>
+        <p>Fill in the details below to create your account:</p>
+        <form id="createAccountForm">
+            <label for="create-name">Name:</label>
+            <input type="text" id="create-name" name="create-name" required>
+
+            <label for="create-email">Email:</label>
+            <input type="email" id="create-email" name="create-email" required>
+
+            <label for="create-password">Password:</label>
+            <input type="password" id="create-password" name="create-password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</div>
 
     <footer>
         <p>&copy; 2025 EV Future | All Rights Reserved</p>
