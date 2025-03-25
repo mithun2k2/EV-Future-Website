@@ -93,10 +93,12 @@
     align-items: center;
     text-align: center;
     padding: 80px 10%;
-    background: url('images/electric-vehicles.JPG') center/cover no-repeat; /* Set background image */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('images/hyundai-cover.jpg') center/cover no-repeat; /* Gradient overlay with background image */
     flex-wrap: wrap; /* Allow wrapping for better responsiveness */
     height: 100vh; /* Full viewport height */
-    color: white;
+    color: white; /* Ensure text is readable on the background */
+    position: relative;
 }
 
 .hero-content {
@@ -132,6 +134,13 @@
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
 }
 
 /* Footer */
