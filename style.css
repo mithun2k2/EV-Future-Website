@@ -505,18 +505,76 @@ footer {
 
 /* EV Image Slider */
 .ev-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
     margin: 20px auto;
+    overflow: hidden; /* Hide overflowing slides */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth slide transition */
 }
 
 .slide {
-    display: none;
-    width: 100%;
-    border-radius: 10px;
+    min-width: 100%; /* Each slide takes up the full width */
+    height: 400px; /* Set a fixed height for the slider */
+    object-fit: cover; /* Ensure images cover the slide area */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Navigation Buttons */
+.ev-slider .prev,
+.ev-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.ev-slider .prev:hover,
+.ev-slider .next:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.ev-slider .prev {
+    left: 10px; /* Position the "previous" button */
+}
+
+.ev-slider .next {
+    right: 10px; /* Position the "next" button */
+}
+
+/* Dots for Navigation */
+.slider-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    background: #00796b; /* Active dot color */
 }
 
 .prev, .next {

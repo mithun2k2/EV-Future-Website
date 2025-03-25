@@ -26,32 +26,55 @@ function toggleMenu() {
 }
 // Image Slider
 let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
 
 function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? "block" : "none";
+    const slides = document.querySelectorAll('.slide');
+    const slidesContainer = document.querySelector('.slides-container');
+    const dots = document.querySelectorAll('.dot');
+
+    // Ensure the index is within bounds
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    // Update the transform property to show the correct slide
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Update active dot
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
     });
 }
 
-function prevSlide() {
-    currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
-    showSlide(currentSlide);
-}
-
 function nextSlide() {
-    currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
-    showSlide(currentSlide);
+    showSlide(currentSlide + 1);
 }
 
-// Initialize the first slide
-document.addEventListener("DOMContentLoaded", () => {
-    showSlide(currentSlide);
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Initialize the slider
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.createElement('div');
+    dotsContainer.classList.add('slider-dots');
+
+    // Create dots for each slide
+    slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active'); // Set the first dot as active
+        dot.addEventListener('click', () => showSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    document.querySelector('.ev-slider').appendChild(dotsContainer);
 });
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
-}
-
 // Contact Form Validation
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
