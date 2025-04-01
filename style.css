@@ -959,6 +959,27 @@ contact-form button:hover {
     background-color: #e6b800;
 }
 
+/*Map Section */
+.map-container {
+    text-align: center;
+    padding: 50px 10%;
+    background: white;
+}
+
+.map-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00796b; /* Dark cyan color for headings */
+}
+
+#map {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .login-box {

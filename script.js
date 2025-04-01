@@ -238,6 +238,43 @@ document.getElementById('createAccountForm').addEventListener('submit', function
     closeCreateAccountModal();
 });
 
+// Map Functionality
+function initMap() {
+    // Map options
+    const mapOptions = {
+        zoom: 15, // Adjust zoom level for closer view
+        center: { lat: 51.507263, lng: 0.064444 } // University of East London coordinates
+    };
+
+    // Create the map
+    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // Add a marker
+    const marker = new google.maps.Marker({
+        position: { lat: 51.507263, lng: 0.064444 }, // UEL coordinates
+        map: map,
+        title: "University of East London"
+    });
+
+    // Add an info window
+    const infoWindow = new google.maps.InfoWindow({
+        content: `<h3>University of East London</h3><p>Docklands Campus</p>`
+    });
+
+    // Open info window on marker click
+    marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+    });
+
+    window.initMap = function () {
+        try {
+            // Call the initMap function
+            initMap();
+        } catch (error) {
+            console.error("Error initializing Google Map:", error);
+        }
+    };
+}
 // Email Validation Function
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
