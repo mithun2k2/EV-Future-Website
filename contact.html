@@ -42,7 +42,7 @@
                 <h2>Our Location</h2>
                 <div id="map" style="width: 100%; height: 400px;"></div>
                 <script>
-                    fetch('/api-key')
+                    fetch('/.netlify/functions/api-key')
                         .then(response => response.json())
                         .then(data => {
                             const script = document.createElement('script');
