@@ -93,40 +93,50 @@
     align-items: center;
     text-align: center;
     padding: 80px 10%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('images/hyundai-cover.jpg') center/cover no-repeat; /* Gradient overlay with background image */
+    background: url('images/porsche.JPG') center/cover no-repeat; /* Set background image */
     flex-wrap: wrap; /* Allow wrapping for better responsiveness */
     height: 100vh; /* Full viewport height */
-    color: white; /* Ensure text is readable on the background */
-    position: relative;
+    color: white;
 }
 
 .hero-content {
-        flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
-        max-width: 50%;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px; /* Consistent padding */
-        border-radius: 15px; /* More rounded corners */
-        margin: 10px;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px; /* Consistent padding */
+    border-radius: 15px; /* More rounded corners */
+    margin: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .hero-content:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.hero h1 {
+.hero-content-1 {
+    background: rgba(128, 0, 0, 0.6); /* Maroon background */
+}
+
+.hero-content-2 {
+    background: rgba(0, 128, 0, 0.6); /* Green background */
+}
+
+.hero-content-3 {
+    background: rgba(0, 0, 128, 0.6); /* Blue background */
+}
+
+.hero-content h1 {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-.hero p {
+.hero-content p {
     font-size: 18px;
     margin-bottom: 20px;
 }
-
+/* Call to Action Button */
 .cta-btn {
     display: inline-block;
     background: #ffcc00;
@@ -178,65 +188,6 @@ footer {
     .hero h1 {
         font-size: 28px;
     }
-}
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 10%;
-    background: url('images/electric-vehicles.JPG') center/cover no-repeat; /* Set background image */
-    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
-    height: 100vh; /* Full viewport height */
-    color: white;
-}
-
-.hero-content {
-    flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
-    max-width: 80%;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px; /* Consistent padding */
-    border-radius: 15px; /* More rounded corners */
-    margin: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.hero-content:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-.hero-content-1 {
-    background: rgba(128, 0, 0, 0.6); /* Maroon background */
-}
-
-.hero-content-2 {
-    background: rgba(0, 128, 0, 0.6); /* Green background */
-}
-
-.hero-content-3 {
-    background: rgba(0, 0, 128, 0.6); /* Blue background */
-}
-
-.hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.cta-btn {
-    display: inline-block;
-    background: #ffcc00;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 /* Revolution Hero Section */
